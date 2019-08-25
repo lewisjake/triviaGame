@@ -11,14 +11,18 @@
        <div class="container">
            <div class="jumbotron">
                <h1>Welcome to my Trivia Game!</h1>
-               <button class="btn btn-primary">Start Game</button>
+               <button class="btn btn-primary" id="start">Start Game</button>
            </div>
 
-           <h2 id="time"></h2>
-           <div id="game"></div>
+           <div id="timeLeft"></div>
+           <div id="gameQuestion"></div>
+           <div id="answer"></div>
+           <button class ="btn btn-primary" id="reset">Play Again?</button>
        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
         <script src="assets/javascript/app.js"></script>
-        <script src="assets/javascript/questions.js"></script>
     </body>
 </html>
