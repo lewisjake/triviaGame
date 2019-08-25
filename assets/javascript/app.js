@@ -61,9 +61,33 @@ $("#start").on("click", function() {
     for (var i =0; i < choices.length; i ++) {
         holderArray.push(choices[i]);
     }
-
-
 });
+
+// start the timer
+function runTimer(){
+    if (!running) {
+        intervalId = setInterval(decrement, 1000);
+        running = true;
+    }
+}
+
+// countdown
+function decrement() {
+    $("#timeLeft").html("<h3>Time remaining: " + timer + "</h3>");
+    timer --;
+
+    if (timer ===0) {
+        unansweredCounter ++;
+        stop(); 
+        $("#answerblock").html("<p>Time is up! The correct answer is: " + pick.choices[pick.correctAnswer] + "</p>");
+    }
+}
+
+// stop timer
+function stop() {
+    running = false;
+    clearInterval(intervalId);
+}
 
 // have the app pick a question from the array and display to user. have the app
 // loop through the possible answers
